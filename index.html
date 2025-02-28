@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Oz to G Calculator - Kush Calc</title>
+    <link rel="icon" href="media/logo-kushCalc.png">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  
+  <body>
+    <div class="layout">
+        <div class="header">
+            <H1 class="logoText">Kush Calc</H1>
+            <nav>
+                <ul class="navLinks">
+                    <li><a href='/dosageCalculator.html'>Dosage Calculator</a></li>
+                    <li><a href='/about.html'>About</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="contentOzToG">
+            <div>
+                <label>Grams:</label>
+                <hr>
+                <input type="number" id="grams">
+            </div>
+            <div>
+                <label>Ounces:</label>
+                <hr>
+                <input type="number" id="ounces">
+            </div>
+            <div>
+                <label># of</label>
+                <input type="number" id="numOfJ">
+                <select id="unitSelect">
+                    <option value="g">grams</option>
+                    <option value="oz">ounces</option>
+                </select>
+                <label> joints:</label>
+                <hr>
+                <input type="number" id="joints">
+            </div>  
+            <div>
+                <label>Est. Price <b>(USD)</b>:</label>
+                <hr>
+                <input type="number" id="price">
+            </div>
+        </div>
+        <div class="ad"></div>
+        <div class="footer">
+            <p>Kush Calculators is your go-to weed calculator for accurate cannabis measurements and THC potency calculations. Easily convert weed in ounces to grams with our cannabis unit calculator, or determine edible potency with our edibles calculator. Whether you're making homemade treats, or need to convert units we provide the tools to ensure precision every time. Simplify your cannabis experience with Kush Calculators!</p>
+        </div>
+    </div>
+    <script src="ozToGPrice.js"></script>
+  </body>
+</html>
