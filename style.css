@@ -3,14 +3,14 @@
 
 @font-face {
   font-family: "ubuntuMed";
-  src: url('fonts/Ubuntu/Ubuntu-Medium.ttf') format('truetype');
+  src: url('Ubuntu-Medium.ttf') format('truetype');
   font-weight: 200;
   font-style: normal;
 }
 
 @font-face {
   font-family: "logoFont1120";
-  src: url('fonts/eleven-twenty/11.20___.TTF') format('truetype');
+  src: url('11.20___.TTF') format('truetype');
   font-weight: 200;
   font-style: normal;
 }
