@@ -3,14 +3,14 @@
 
 @font-face {
   font-family: "ubuntuMed";
-  src: url('Ubuntu-Medium.ttf') format('truetype');
+  src: url('fonts/Ubuntu/Ubuntu-Medium.ttf') format('truetype');
   font-weight: 200;
   font-style: normal;
 }
 
 @font-face {
   font-family: "logoFont1120";
-  src: url('11.20___.ttf') format('truetype');
+  src: url('fonts/eleven-twenty/11.20___.TTF') format('truetype');
   font-weight: 200;
   font-style: normal;
 }
@@ -21,7 +21,8 @@
 
 body {
   font-family: ubuntuMed;
-  background-color: #e6e7cf;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(0deg, rgb(223, 230, 168) 20%, rgb(234, 238, 208) 100%);
   padding: 0px;
   margin: 0px;
 }
@@ -39,7 +40,11 @@ input {
 }
 
 input:hover {
-  border:#a0a0a0, solid, 3px;
+  border:#888888, solid, 3px;
+}
+
+input:focus {
+  border:#888888, solid, 3px;
 }
 
 #unitSelect {
@@ -78,7 +83,7 @@ input:hover {
     padding: 20px;
     margin-bottom: 20px;
     background-color: #ffffff;
-    box-shadow: 0 10px 0 #99a47d;  
+    box-shadow: 0 10px 0px #808a66, 0 15px 6px rgba(0, 0, 0, 0.2);  
     font-size: 25px;
     font-weight: 700;
     font-style: italic;
@@ -145,8 +150,9 @@ input:hover {
     padding: 10px;
     padding-bottom: 50px;
     background-color: #ffffff;
-    outline: .31rem solid #99a47d;
+    outline: 5px solid #808a66;
     border-radius:10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);;
     font-size: 16px;
 
     max-height: 300px;
