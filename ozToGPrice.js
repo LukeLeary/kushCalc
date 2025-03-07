@@ -40,10 +40,10 @@ const calculateValues = (sourceValue, sourceType) => {
 
     return {
         //these properties are then added under the values constant in the update inputs function
-        grams: grams,
-        ounces: grams / GRAMS_PER_OUNCE,
-        joints: grams / jointAmount,
-        price: grams * PRICE
+        grams: Math.round(grams * 100) / 100,
+        ounces: Math.round((grams / GRAMS_PER_OUNCE) * 100) / 100,
+        joints: Math.round((grams / jointAmount) * 100) / 100,
+        price: Math.round((grams * PRICE) * 100)/ 100
     };
 };
 
