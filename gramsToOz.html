@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Edible Dosage Calculator - Kush Calc</title>
-    <link rel="icon" href="favicon-kushCalc.png">
+    <title>Oz to G Calculator - Kush Calc</title>
+    <link rel="icon" href="logo-kushCalc.png">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
-    <script>
+     <script>
     window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
     </script>
     <script defer src="/_vercel/insights/script.js"></script>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8497475065221627"
      crossorigin="anonymous"></script>
   </head>
-
+  
   <body>
     <div class="layout">
         <div class="header">
@@ -21,45 +21,37 @@
             <nav>
                 <ul class="navLinks">
                     <li><a href='/'>random J's</a></li>
-                    <li><a href='/gramsToOz.html'>Oz to Grams Calculator</a></li>
+                    <li><a href='/dosageCalculator.html'>Dosage Calculator</a></li>
                     <li><a href='/about.html'>About</a></li>
                 </ul>
             </nav>
         </div>
-        <div class="contentDosageCalc">
+        <div class="contentOzToG">
             <div>
-                <label>Amount of cannabis <b>(in grams)</b>:</label>
+                <label>Grams:</label>
                 <hr>
-                <input type="number" id="cannabisAmount">
+                <input type="number" id="grams">
             </div>
             <div>
-                <label>THC percentage:</label>
+                <label>Ounces:</label>
                 <hr>
-                <input type="number" id="percentTHC">
+                <input type="number" id="ounces">
             </div>
             <div>
-                <label>Amount of liquid <b>(oil or melted butter)</b> for the infusion <b>(cups)</b>:</label>
+                <label># of joints:</label>
+                <input type="number" id="numOfJ">
                 <hr>
-                <input type="number" id="cupsOfLiquid">
-                <label>Cups</label>
+                <input type="number" id="joints">
+                <select id="unitSelect">
+                    <option value="g">grams</option>
+                    <option value="oz">ounces</option>
+                </select>
+                <label>per joint</label>
             </div>  
             <div>
-                <label>How many <b>tablespoons of infused extract</b> are in your recipe?:</label>
+                <label>Est. Price <b>(USD)</b>:</label>
                 <hr>
-                <input type="number" id="tablespoons">
-                <label>Tbsp</label>
-                <hr>
-                <label>How many <b>servings</b> are in your recipe?:</label>
-                <hr>
-                <input type="number" id="servings">
-            </div>
-            <div class="resultBox">
-                <label>Total THC: </label>
-                <p id="totalResult"></p>
-                <label>THC per Tbsp: </label>
-                <p id="tbspResult"></p>
-                <label>THC per serving: </label>
-                <p id="perServingResult"></p>
+                <input type="number" id="price">
             </div>
         </div>
         <div class="ad"></div>
@@ -67,6 +59,6 @@
             <p>Kush Calculators is your go-to weed calculator for accurate cannabis measurements and THC potency calculations. Easily convert weed in ounces to grams with our cannabis unit calculator, or determine edible potency with our edibles calculator. Whether you're making homemade treats, or need to convert units we provide the tools to ensure precision every time. Simplify your cannabis experience with Kush Calculators!</p>
         </div>
     </div>
-    <script src="dosageCalc.js"></script>
+    <script src="ozToGPrice.js"></script>
   </body>
 </html>
