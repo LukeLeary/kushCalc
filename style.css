@@ -3,14 +3,14 @@
 
 @font-face {
   font-family: "ubuntuMed";
-  src: url('Ubuntu-Medium.ttf') format('truetype');
+  src: url('fonts/Ubuntu/Ubuntu-Medium.ttf') format('truetype');
   font-weight: 200;
   font-style: normal;
 }
 
 @font-face {
   font-family: "logoFont1120";
-  src: url('11.20___.ttf') format('truetype');
+  src: url('fonts/eleven-twenty/11.20___.TTF') format('truetype');
   font-weight: 200;
   font-style: normal;
 }
@@ -31,6 +31,19 @@ hr {
     visibility: hidden;
 }
 
+button {
+  padding: 5px;
+  background-color:#f6f6f6;
+  outline: none;
+  border:#bebebe, solid, 3px;
+  border-radius: 5px;
+}
+
+button:hover {
+  border:#888888, solid, 3px;
+
+}
+
 input {
   padding: 5px;
   background-color:#f6f6f6;
@@ -39,11 +52,7 @@ input {
   border-radius: 5px;
 }
 
-input:hover {
-  border:#888888, solid, 3px;
-}
-
-input:focus {
+input:hover, input:focus {
   border:#888888, solid, 3px;
 }
 
@@ -123,6 +132,7 @@ input:focus {
   margin-left: 10px;
   margin-right: 10px;
   align-items: center;
+  font-size: 20px;
 }
 
 .navLinks a:link, a:visited {
@@ -174,6 +184,23 @@ input:focus {
     margin: 30px;
     padding: 20px
   }
+
+  .card {
+    /* Add shadows to create the "card" effect */
+    width: 300px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3);
+    transition: 0.3s;
+  }
+
+  .container {
+    padding: 20px;
+  }
+  
+  /* On mouse-over, add a deeper shadow */
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.35);
+  }
+  
 
 /*footer*/
 
