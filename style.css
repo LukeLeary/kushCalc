@@ -22,7 +22,7 @@
 body {
   font-family: ubuntuMed;
   background: rgb(255, 255, 255);
-  background: linear-gradient(0deg, rgb(223, 230, 168) 20%, rgb(234, 238, 208) 100%);
+  background: -webkit-linear-gradient(0deg, rgb(223, 230, 168) 20%, rgb(234, 238, 208) 100%);
   padding: 0px;
   margin: 0px;
 }
