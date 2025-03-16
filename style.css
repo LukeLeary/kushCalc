@@ -22,7 +22,7 @@
 body {
   font-family: ubuntuMed;
   background: rgb(255, 255, 255);
-  background: linear-gradient(0deg, rgb(223, 230, 168) 20%, rgb(234, 238, 208) 100%);
+  background: -webkit-linear-gradient(0deg, rgb(223, 230, 168) 20%, rgb(234, 238, 208) 100%);
   padding: 0px;
   margin: 0px;
 }
@@ -187,7 +187,7 @@ input:hover, input:focus {
 
   .card {
     /* Add shadows to create the "card" effect */
-    width: 300px;
+    width: 275px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3);
     transition: 0.3s;
   }
