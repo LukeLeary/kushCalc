@@ -3,14 +3,14 @@
 
 @font-face {
   font-family: "ubuntuMed";
-  src: url('fonts/Ubuntu/Ubuntu-Medium.ttf') format('truetype');
+  src: url('Ubuntu-Medium.ttf') format('truetype');
   font-weight: 200;
   font-style: normal;
 }
 
 @font-face {
   font-family: "logoFont1120";
-  src: url('fonts/eleven-twenty/11.20___.TTF') format('truetype');
+  src: url('11.20___.ttf') format('truetype');
   font-weight: 200;
   font-style: normal;
 }
@@ -74,23 +74,22 @@ input:hover, input:focus {
 /*trying to organize a little bit*/
 
 
-/*header*/
-
 .layout {
     display: grid;
     grid-template-areas: 
     "header" 
-    "content" 
     "ad"
+    "mainContent" 
     "footer";
   }
+
+
+/*header*/
 
 .layout > div.header {
     grid-area: header;
     display: flex;
     justify-content: flex-end;
-    padding: 20px;
-    margin-bottom: 20px;
     background-color: #ffffff;
     box-shadow: 0 10px 0px #808a66, 0 15px 6px rgba(0, 0, 0, 0.2);  
     font-size: 25px;
@@ -100,53 +99,134 @@ input:hover, input:focus {
     color: #3e4921;
 }
 
-@media only screen and (max-width: 600px) {
-  .layout > div.header {
-    font-size: 3.5vw;
+nav {
+  height: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.navLinksContainer {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+nav a, nav a:visited {
+  height: 100%;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-size: 1.5vw;
+  color:#3e4921;
+}
+
+nav a:hover {
+  color:#5d6d33;
+  background-color: #e5e5e5;
+}
+
+nav .logoText {
+  margin-right: auto;
+  font-family: 'logoFont1120';
+  display: flex;
+  align-items: center;
+  font-size: 3vw;
+}
+
+nav .logoText:hover {
+  color:#5d6d33;
+  background-color: #e5e5e5;
+}
+
+#hidden.logoText {
+  display: none;
+}
+
+#sidebarActive {
+  display: none;
+}
+
+.openSidebarButton, .closeSidebarButton {
+  display: none;
+}
+
+@media only screen and (max-width: 800px) {
+
+  .navLinksContainer {
+    flex-direction: column;
+    align-items: flex-start;
+
+    position: fixed;
+    /*had to add this -25px to fix sideNav's 25px low position, not sure why tho*/
+    top:-25px;
+    right: -100%;
+    width: 250px;
+    z-index: 10;
+
+    background-color: #ffffff;
+    box-shadow: -5px 0 5px rgba(0, 0, 0, 0.2);
+    transition: .6s ease-out;
   }
 
-  .logoText {
-    margin-top: 50px;
+  nav a {
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    padding: 20px 30px;
+    font-size: 4.5vw;
   }
 
-  .navLinks li {
-    margin-top: 10px;
+  nav .logoText {
+    display: none;
+  }
+
+  #hidden.logoText {
+    display:flex;
+    height: 100%;
+    margin-right: auto;
+    align-items: center;
+    width:fit-content;
+    font-family: 'logoFont1120';
+    font-size: 5.5vw;
+  }
+
+  .openSidebarButton, .closeSidebarButton {
+    display: block;
+    padding: 20px;
+  }
+
+  #sidebarActive:checked ~ .navLinksContainer{
+    right: 0;
+  }
+
+  #sidebarActive:checked ~ #overlay{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9;
   }
 
   .textBox {font-size: 3.5vw;}
 }
 
-.logoText {
-   margin-right: auto;
-   font-family: logoFont1120;
-}
+/*ads*/
 
-
-.navLinks {
-  list-style: none;
-  padding: 20px;  
-}
-
-.navLinks li {
-  display: inline-block;
-  margin-left: 10px;
-  margin-right: 10px;
-  align-items: center;
-  font-size: 20px;
-}
-
-.navLinks a:link, a:visited {
-  color:#3e4921;
-  text-decoration: none;
-}
-
-.navLinks a:hover {
-  color:#5d6d33;
-  text-decoration: none;
+.layout > div.ads {
+  padding: 20px 0;
+  grid-area: ad;
 }
 
 /*content*/
+
   .layout > div.contentOzToG, .layout > div.contentDosageCalc {
+    grid-area: mainContent;
     display: grid;
     grid-template-columns: repeat(auto-fit, 300px);
     gap: 20px;
@@ -156,6 +236,8 @@ input:hover, input:focus {
     min-height: calc(100vh - 205px);
   }
   
+  /*grids within grids (for calculators)*/
+
   .layout > div.contentOzToG > div, .layout > div.contentDosageCalc > div {
     padding: 10px;
     padding-bottom: 50px;
@@ -174,14 +256,16 @@ input:hover, input:focus {
   }
 
   .layout > div.aboutContent {
+    grid-area: mainContent;
     min-height: calc(100vh - 205px);
   }
 
-  .textBox {
+  div.textBox {
+    grid-area: mainContent;
     background-color: #ffffff;
     outline: 5px solid #99a47d;
     border-radius: 10px;
-    margin: 30px;
+    margin: 30px;    
     padding: 20px
   }
 
