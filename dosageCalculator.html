@@ -17,15 +17,31 @@
   <body>
     <div class="layout">
         <div class="header">
-            <H1 class="logoText">Kush Calc</H1>
             <nav>
-                <ul class="navLinks">
-                    <li><a href='/'>random J's</a></li>
-                    <li><a href='/gramsToOz.html'>Oz to Grams Calculator</a></li>
-                    <li><a href='/about.html'>About</a></li>
+                <a id="hidden" class="logoText" href='/'>Kush Calc</a>
+                <input type="checkbox" id="sidebarActive">
+                <label for="sidebarActive" class="openSidebarButton">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#3e4921"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+                </label>
+
+                <label id="overlay" for="sidebarActive"></label>
+                <ul class="navLinksContainer">
+                    <label for="sidebarActive" class="closeSidebarButton">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#3e4921"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+                    </label>
+
+                    <a id='main' class="logoText" href='/'>Kush Calc</a>
+                    <a href='https://herbalizestore.co.uk?bg_ref=KzztwJrgpx' target="_blank">Vaporizers</a>
+                    <a href='/'>Random J's</a>
+                    <a href='/gramsToOz.html'>Oz to Grams <br> Calculator</a>
+                    <a href='/dosageCalculator.html'>Dosage <br> Calculator</a>
+                    <a href='/about.html'>About</a>
                 </ul>
             </nav>
         </div>
+
+        <div class="ads" id="frame"><iframe data-aa='2386830' src='//acceptable.a-ads.com/2386830' style='border:0px; padding:0; width:100%; height:100%; overflow:hidden; background-color: transparent;'></iframe><a style="display: block; text-align: right; font-size: 12px;" id="preview-link" href="https://aads.com/campaigns/new/?source_id=2386830&source_type=ad_unit&partner=2386830">Advertise here</a></div>
+
         <div class="contentDosageCalc">
             <div>
                 <label>Amount of cannabis <b>(in grams)</b>:</label>
@@ -62,7 +78,6 @@
                 <p id="perServingResult"></p>
             </div>
         </div>
-        <div class="ad"></div>
         <div class="footer">
             <p>Kush Calculators is your go-to weed calculator for accurate cannabis measurements and THC potency calculations. Easily convert weed in ounces to grams with our cannabis unit calculator, or determine edible potency with our edibles calculator. Whether you're making homemade treats, or need to convert units we provide the tools to ensure precision every time. Simplify your cannabis experience with Kush Calculators!</p>
         </div>
