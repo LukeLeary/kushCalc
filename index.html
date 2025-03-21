@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Random J's - Kush Calc</title>
+    <link rel="icon" href="media/logo-kushCalc.png">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  
+  <body>
+    <div class="layout">
+        <div class="header">
+            <H1 class="logoText">Kush Calc</H1>
+            <nav>
+                <ul class="navLinks">
+                    <li><a href='/gramsToOz.html'>Oz to Grams Calculator</a></li>
+                    <li><a href='/dosageCalculator.html'>Dosage Calculator</a></li>
+                    <li><a href='/about.html'>About</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="aboutContent">
+            <div class="textBox">
+                <h1>
+                    <label>What am I Smoking Today?</label>
+                    <button onclick="showImage()">Random Joint</button>
+                </h1>
+                <hr>
+                <div class="card">
+                    <img id="randomImage" src="" style="width:100%" />
+                    <div class="container">
+                        <h3 id="jointName"></h3>
+                        <hr>
+                        <label>How to Roll it:</label>
+                        <a id="tutorialLink" href="" target="_blank">Tutorial Vid</a>
+                    </div>
+                </div>
+                <hr>
+                <a href="https://youtube.com/playlist?list=PLCK6G-Uifp1s62Z9IVLq8w9BRjiXlmJeW&feature=shared" target="_blank">Full Tutorial Playlist</a>
+                
+            </div>
+        </div>
+        <div class="ad"></div>
+        <div class="footer">
+            <p>Kush Calculators is your go-to weed calculator for accurate cannabis measurements and THC potency calculations. Easily convert weed in ounces to grams with our cannabis unit calculator, or determine edible potency with our edibles calculator. Whether you're making homemade treats, or need to convert units we provide the tools to ensure precision every time. Simplify your cannabis experience with Kush Calculators!</p>
+        </div>
+    </div>
+    <script src="randPic.js"></script>
+  </body>
+</html>

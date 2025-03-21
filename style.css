@@ -1,0 +1,214 @@
+
+/*custom fonts*/
+
+@font-face {
+  font-family: "ubuntuMed";
+  src: url('fonts/Ubuntu/Ubuntu-Medium.ttf') format('truetype');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "logoFont1120";
+  src: url('fonts/eleven-twenty/11.20___.TTF') format('truetype');
+  font-weight: 200;
+  font-style: normal;
+}
+
+
+
+
+
+body {
+  font-family: ubuntuMed;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(0deg, rgb(223, 230, 168) 20%, rgb(234, 238, 208) 100%);
+  padding: 0px;
+  margin: 0px;
+}
+  
+hr {
+    visibility: hidden;
+}
+
+button {
+  padding: 5px;
+  background-color:#f6f6f6;
+  outline: none;
+  border:#bebebe, solid, 3px;
+  border-radius: 5px;
+}
+
+button:hover {
+  border:#888888, solid, 3px;
+
+}
+
+input {
+  padding: 5px;
+  background-color:#f6f6f6;
+  outline: none;
+  border:#bebebe, solid, 3px;
+  border-radius: 5px;
+}
+
+input:hover, input:focus {
+  border:#888888, solid, 3px;
+}
+
+#unitSelect {
+  padding: 5px;
+  background-color:#f6f6f6;
+  outline: none;
+  border:#bebebe, solid, 3px;
+  border-radius: 5px;
+  font-family: ubuntuMed;
+}
+
+#numOfJ {
+  width: 50px;
+}
+
+
+
+/*trying to organize a little bit*/
+
+
+/*header*/
+
+.layout {
+    display: grid;
+    grid-template-areas: 
+    "header" 
+    "content" 
+    "ad"
+    "footer";
+  }
+
+.layout > div.header {
+    grid-area: header;
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 10px 0px #808a66, 0 15px 6px rgba(0, 0, 0, 0.2);  
+    font-size: 25px;
+    font-weight: 700;
+    font-style: italic;
+    text-transform: uppercase;
+    color: #3e4921;
+}
+
+@media only screen and (max-width: 600px) {
+  .layout > div.header {
+    font-size: 3.5vw;
+  }
+
+  .logoText {
+    margin-top: 50px;
+  }
+
+  .navLinks li {
+    margin-top: 10px;
+  }
+
+  .textBox {font-size: 3.5vw;}
+}
+
+.logoText {
+   margin-right: auto;
+   font-family: logoFont1120;
+}
+
+
+.navLinks {
+  list-style: none;
+  padding: 20px;  
+}
+
+.navLinks li {
+  display: inline-block;
+  margin-left: 10px;
+  margin-right: 10px;
+  align-items: center;
+  font-size: 20px;
+}
+
+.navLinks a:link, a:visited {
+  color:#3e4921;
+  text-decoration: none;
+}
+
+.navLinks a:hover {
+  color:#5d6d33;
+  text-decoration: none;
+}
+
+/*content*/
+  .layout > div.contentOzToG, .layout > div.contentDosageCalc {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 300px);
+    gap: 20px;
+    justify-content: center;
+    margin: 30px;
+
+    min-height: calc(100vh - 205px);
+  }
+  
+  .layout > div.contentOzToG > div, .layout > div.contentDosageCalc > div {
+    padding: 10px;
+    padding-bottom: 50px;
+    background-color: #ffffff;
+    outline: 5px solid #808a66;
+    border-radius:10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);;
+    font-size: 16px;
+
+    max-height: 300px;
+  }
+
+
+  .layout > div.contentDosageCalc > div.resultBox {
+    font-size: 20px;
+  }
+
+  .layout > div.aboutContent {
+    min-height: calc(100vh - 205px);
+  }
+
+  .textBox {
+    background-color: #ffffff;
+    outline: 5px solid #99a47d;
+    border-radius: 10px;
+    margin: 30px;
+    padding: 20px
+  }
+
+  .card {
+    /* Add shadows to create the "card" effect */
+    width: 275px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3);
+    transition: 0.3s;
+  }
+
+  .container {
+    padding: 20px;
+  }
+  
+  /* On mouse-over, add a deeper shadow */
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.35);
+  }
+  
+
+/*footer*/
+
+  .layout > div.footer {
+    grid-area: footer;
+    padding: 20px;
+    bottom: 0;
+    left: 0px;
+    right: 0px;
+    background-color: #ffffff;
+  }
